@@ -1,0 +1,19 @@
+<table class="table">
+    <thead class="thead-dark">
+      <tr class="text-secondary text-center">
+        <th scope="col">ID</th>
+        <th scope="col">Name Service Consumer</th>
+        <th scope="col">Date</th>
+      </tr>
+    </thead>
+    <tbody>      
+      @for (log of bitacoras; track log.id){
+        <tr class="text-secondary text-center">
+            <td>{{log.id}}</td>
+            <td>{{log.nameService}}</td>
+            <td>{{log.fechaOpera | date: 'dd/MM/yyyy hh:mm:ss'}}</td>
+        </tr>
+        }
+    </tbody>
+  </table>
+  
