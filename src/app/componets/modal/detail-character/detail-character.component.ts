@@ -34,11 +34,10 @@ export class DetailCharacterComponent {
 
   closeModal(){
 
-    $(this.modal?.nativeElement).modal('remove');
+    $(this.modal?.nativeElement).modal('close');
   }
 
   getCharactertById(id:number){
-    console.log('getClientById-', id);
     
         this.consultaService.getCharactertById(id).subscribe(data=>{
           console.log(data);
